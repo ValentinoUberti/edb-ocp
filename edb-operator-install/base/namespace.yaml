@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: ""
+    openshift.io/display-name: ""
+    openshift.io/requester: admin
+    openshift.io/sa.scc.mcs: s0:c28,c12
+    openshift.io/sa.scc.supplemental-groups: 1000780000/10000
+    openshift.io/sa.scc.uid-range: 1000780000/10000
+  labels:
+    kubernetes.io/metadata.name: edb
+    olm.operatorgroup.uid/72d3de8b-aceb-4e51-ba4b-37decbd29882: ""
+    pod-security.kubernetes.io/audit: restricted
+    pod-security.kubernetes.io/audit-version: v1.24
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/warn-version: v1.24
+  name: edb
+spec:
+  finalizers:
+  - kubernetes

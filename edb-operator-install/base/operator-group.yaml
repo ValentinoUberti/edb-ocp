@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    olm.providedAPIs: Backup.v1.postgresql.k8s.enterprisedb.io,Cluster.v1.postgresql.k8s.enterprisedb.io,ClusterImageCatalog.v1.postgresql.k8s.enterprisedb.io,ImageCatalog.v1.postgresql.k8s.enterprisedb.io,Pooler.v1.postgresql.k8s.enterprisedb.io,ScheduledBackup.v1.postgresql.k8s.enterprisedb.io
+  name: edb-946nd
+  namespace: edb
+spec:
+  targetNamespaces:
+  - edb
+  upgradeStrategy: Default

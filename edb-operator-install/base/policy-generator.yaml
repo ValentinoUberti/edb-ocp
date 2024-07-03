@@ -1,0 +1,16 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: install-edb-operator
+policyDefaults:
+  namespace: policies
+  placement:
+    clusterSelectors:
+      vendor: "OpenShift"
+  remediationAction: enforce
+policies:
+  - name: install-edb-operator
+    manifests:
+      - path: namespace.yaml
+      - path: operator-group.yaml
+      - path: sub.yaml
