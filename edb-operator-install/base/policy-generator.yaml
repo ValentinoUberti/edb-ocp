@@ -5,9 +5,12 @@ metadata:
 policyDefaults:
   namespace: policies
   placement:
+    name: placement-edb
     clusterSelectors:
       vendor: "OpenShift"
   remediationAction: enforce
+placementBindingDefaults:
+  name: "binding-edb"
 policies:
   - name: install-edb-operator
     manifests:
