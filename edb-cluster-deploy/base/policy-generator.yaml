@@ -1,0 +1,18 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: deploy-edb-cluster
+policyDefaults:
+  namespace: policies
+  placement:
+    name: deploy-edb-cluster
+    clusterSelectors:
+      vendor: "OpenShift"
+  remediationAction: enforce
+placementBindingDefaults:
+  name: "binding-edb"
+policies:
+  - name: deploy-edb-cluster
+    manifests:
+      - path: edb-cluster.yaml
+      
