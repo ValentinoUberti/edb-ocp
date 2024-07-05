@@ -34,7 +34,7 @@ spec:
     - key: queries
       name: postgresql-operator-default-monitoring
     disableDefaultQueries: false
-    enablePodMonitor: false
+    enablePodMonitor: true
   nodeMaintenanceWindow:
     inProgress: false
     reusePVC: true
@@ -80,8 +80,8 @@ spec:
   stopDelay: 1800
   storage:
     resizeInUseVolumes: true
-    size: 1Gi
+    size: 40Gi
   switchoverDelay: 3600
   walStorage:
     resizeInUseVolumes: true
-    size: 1Gi
+    size: 4Gi
