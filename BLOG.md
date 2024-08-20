@@ -1,4 +1,4 @@
-![OpenShift Disaster Recovery](images/edb-logo.png?raw=true "EDB")
+![EDB Logo](images/edb-logo.svg?raw=true "EDB")
 
 Ditch the database drama and embrace the power of EDB - the cloud-native database that installs in minutes.
 
