@@ -26,6 +26,24 @@ kustomize build --enable-alpha-plugins edb-operator-install/overlays/ | oc apply
 
 The ```edb-operator-install``` directory has the classic kustomize layout composed by a 'base' and an 'overlays' subdirectory
 
+
+```
+▒▓ Ͽ  …/edb-ocp/edb-operator-install   main   12:10  
+❯ tree
+.
+├── base
+│   ├── kustomization.yaml
+│   ├── namespace.yaml
+│   ├── operator-group.yaml
+│   ├── policy-generator.yaml
+│   └── sub.yaml
+└── overlays
+    ├── edb-1
+    │   └── kustomization.yaml
+    └── kustomization.yaml
+```
+
+
 Once the first command is run, the following resources will be created on all the OpenShift clusters having a the `vendor` label equal to 'OpenShift':
 
 - Namespace
