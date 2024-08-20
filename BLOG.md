@@ -28,8 +28,6 @@ The ```edb-operator-install``` directory has the classic kustomize layout compos
 
 
 ```
-▒▓ Ͽ  …/edb-ocp/edb-operator-install   main   12:10  
-❯ tree
 .
 ├── base
 │   ├── kustomization.yaml
@@ -74,3 +72,22 @@ policies:
       - path: sub.yaml
 ```
 
+After the EDB Operator is up and running let's execute the second step to actually deploy the EDB databases with all the required components:
+
+```
+kustomize build --enable-alpha-plugins edb-cluster-deploy/overlays/ | oc apply -f -
+```
+
+Here the 'edb-cluster-deploy' tree:
+
+```
+├── base
+│   ├── edb-cluster.yaml
+│   ├── kustomization.yaml
+│   └── policy-generator.yaml
+└── overlays
+    ├── edb-1
+    │   ├── edb-cluster.yaml
+    │   └── kustomization.yaml
+    └── kustomization.yaml
+```
