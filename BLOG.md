@@ -1,3 +1,5 @@
+![OpenShift Disaster Recovery](images/logo.png?raw=true "EDB")
+
 Ditch the database drama and embrace the power of EDB - the cloud-native database that installs in minutes.
 
 - Serverless, autoscaling database built for the cloud
